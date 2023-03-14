@@ -1,0 +1,286 @@
+<header>
+  <div>
+    <button class="logo">
+      <svg><use xlink:href="assets/kmc-sprite.svg#logo" /></svg>
+    </button>
+    <button class="logo-mobile">
+      <svg><use xlink:href="assets/kmc-sprite.svg#logo-mobile" /></svg>
+    </button>
+    <div>Crawford's learning management portal for all your professional development needs.</div>
+  </div>
+  <div>
+    <button class="icon user">
+      <img src="assets/userimage.jpg" alt="User Name">
+    </button>
+    <button class="icon">
+      <svg><use xlink:href="assets/kmc-sprite.svg#home" /></svg>
+    </button>
+    <button class="icon" onclick="document.querySelector('header nav div').classList.toggle('open')">
+      <svg><use xlink:href="assets/kmc-sprite.svg#3lines" /></svg>
+    </button>
+  </div>
+  <nav>
+    <div>
+      <button class="close" onclick="document.querySelector('header nav div').classList.toggle('open')">
+        <svg><use xlink:href="assets/kmc-sprite.svg#close" /></svg>
+      </button>
+      <button>My Account</button>
+      <button>My Dashboard</button>
+      <button>FAQ's</button>
+      <button>Welcome Video</button>
+      <button>Contact Crawford<br>Educational Services</button>
+      <button (click)="logOut()">Log Out</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <nav>
+    <div class="menu">
+      <button (click)="toggleMenu()">
+        <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu" /></svg>
+      </button>
+    </div>
+    <button #progress class="icon" (click)="setSelected(progress)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#progress" /></svg>
+      <span>Progress<br>& Certificates</span>
+    </button>
+    <button #resources class="icon" (click)="setSelected(resources)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#resources" /></svg>
+      <span>Learner<br>Resources</span>
+    </button>
+    <button #ce class="icon" (click)="setSelected(ce)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#ce" /></svg>
+      <span>CE Credits<br>& Licences</span>
+    </button>
+    <button #forms class="icon" (click)="setSelected(forms)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#forms" /></svg>
+      <span>Documents<br>& Forms</span>
+    </button>
+    <button #myemployees class="icon" (click)="setSelected(myemployees)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#my-employees" /></svg>
+      <span>Manage<br>My Employees</span>
+    </button>
+    <button #map class="icon" (click)="setSelected(map)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#map" /></svg>
+      <span>Manager Acceleration<br>Program (MAP)</span>
+    </button>
+    <button #gbsc class="icon" (click)="setSelected(gbsc)">
+      <svg><use xlink:href="assets/kmc-sprite.svg#gbsc" /></svg>
+      <span>Global File<br>Center (GBSC)</span>
+    </button>
+    <button class="icon submenu" (click)="otherLinks()">
+      <svg><use xlink:href="assets/kmc-sprite.svg#linkother" /></svg>
+      <span>Link to<br>Other Programs</span>
+      <svg class="arrow"><use xlink:href="assets/kmc-sprite.svg#arrow" /></svg>
+    </button>
+    <ul>
+      <li><button>Compliance<br>(Navex)</button></li>
+      <li><button>LinkedIn<br>Learning</button></li>
+      <li><button>KnowBe4</button></li>
+      <li><button>WorkRite</button></li>
+      <li><button>StigmaZero</button></li>
+      <li><button>Jhana</button></li>
+    </ul>
+  </nav>
+  <section>
+    <div class="searchbar">
+      <label>
+        <input type="search" placeholder="Search KMC On Demand" required>
+      </label>
+    </div>
+    <div class="content">
+      <h1>Training Dashboard</h1>
+      <p>View training you have added to your dashboard or add something new! Using Search or the links below, you can register for live instructor-led classes, take an online course, or check out learning path containing courses collected for specific instructional goals.</p><a href="">Not sure where to start?</a>
+      <div class="boxes">
+        <div>
+          <button>
+            <svg><use xlink:href="assets/kmc-sprite.svg#instructor-led"/></svg>
+            <div>
+              <span class="title">Instructor-led Classes</span>
+              <span class="caption">Register for an instructor-led class <span>›</span></span>
+            </div>
+          </button>
+          <div class="status">
+            <button class="selected">
+              <span class="number">2</span>
+              <span class="text">Enrolled</span>
+            </button>
+            <button>
+              <span class="number">1</span>
+              <span class="text">Completed</span>
+            </button>
+            <button>
+              <span class="number">0</span>
+              <span class="text">Past Due</span>
+            </button>
+            <button>
+              <span class="number">1</span>
+              <span class="text">In Progress</span>
+            </button>
+          </div>
+          <div class="assigned">
+            <span>My Instructor-led Classes (<span>3</span>)</span>
+            <div>
+              <button>
+                <span>Intermediate Property Loss Adjusting</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                <span>Live Orientation</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+
+            </div>
+            <div>
+              <button>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow" /></svg>
+                <div>view all</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button>
+            <svg><use xlink:href="assets/kmc-sprite.svg#online"/></svg>
+            <div>
+              <span class="title">Online Courses</span>
+              <span class="caption">Enroll in an online course <span>›</span></span>
+            </div>
+          </button>
+          <div class="status">
+            <button class="selected">
+              <span class="number">7</span>
+              <span class="text">Enrolled</span>
+            </button>
+            <button>
+              <span class="number">15</span>
+              <span class="text">Completed</span>
+            </button>
+            <button>
+              <span class="number">0</span>
+              <span class="text">Past Due</span>
+            </button>
+            <button>
+              <span class="number">1</span>
+              <span class="text">In Progress</span>
+            </button>
+          </div>
+          <div class="assigned">
+            <span>My Online Courses (<span>22</span>)</span>
+            <div>
+              <button>
+                <span>Auto Liability Course</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                <span>Best Practice Focus Training - Casualty Reserves</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                <span>Best Practice Focus Training - Client Service Instructions</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                <span>Best Practice Focus Training - Contacts</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                <span>Best Practice Focus Training - SPOA</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <!--<button>
+                  <span>Best Practice Focus Training - Supervision</span>
+                  <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                  <span>Casualty Core Skills Course II</span>
+                  <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>-->
+
+            </div>
+            <div>
+              <button>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow" /></svg>
+                <div>view all</div>
+              </button>
+              <!--<button><div>›</div></button>-->
+            </div>
+          </div>
+        </div>
+        <div>
+          <button>
+            <svg><use xlink:href="assets/kmc-sprite.svg#paths"/></svg>
+            <div>
+              <span class="title">Learning Paths</span>
+              <span class="caption">Enroll in a learning path <span>›</span></span>
+            </div>
+          </button>
+          <div class="status">
+            <button>
+              <span class="number">1</span>
+              <span class="text">Enrolled</span>
+            </button>
+            <button>
+              <span class="number">0</span>
+              <span class="text">Completed</span>
+            </button>
+            <button>
+              <span class="number">0</span>
+              <span class="text">Past Due</span>
+            </button>
+            <button class="selected">
+              <span class="number">1</span>
+              <span class="text">In Progress</span>
+            </button>
+          </div>
+          <div class="assigned">
+            <span>My Learning Paths (<span>1</span>)</span>
+            <div>
+              <button>
+                <span>Onboarding - Broadspire Administrative</span>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <!--<button>
+                  <span>Onboarding - Broadspire WC Claims</span>
+                  <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                  <span>Property Adjuster</span>
+                  <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                  <span>Property Adjuster II</span>
+                  <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>
+              <button>
+                  <span>Residential Property Loss Adjusting Prework</span>
+                  <svg><use xlink:href="assets/kmc-sprite.svg#arrow-menu"/></svg>
+              </button>-->
+
+            </div>
+            <div>
+              <button>
+                <svg><use xlink:href="assets/kmc-sprite.svg#arrow" /></svg>
+                <div>view all</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <select>
+      <option value="en" selected="">United States - English</option>
+      <option value="es">United States - Español</option>
+      <option value="fr">Canada - French</option>
+      <option value="pt">Brazil - Portuguese</option>
+      <option value="uk">UK - English</option>
+    </select>
+  </div>
+  <div>KMC On Demand © 2023</div>
+</footer>
